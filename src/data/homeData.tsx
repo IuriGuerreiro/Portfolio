@@ -8,7 +8,7 @@ export const portfolioData = {
     hero: {
       role: "Full Stack Developer & AI Engineer",
       bio: "Bridging the gap between scalable web architecture and intelligent AI agents. Specializing in Python, React Native, and LLM orchestration.",
-      location: "Lisbon, Portugal",
+      location: "Amora, Portugal",
       status: "Open to Work",
       cta: "View Projects"
     },
@@ -19,28 +19,6 @@ export const portfolioData = {
     },
     projects: [
       {
-        title: "AI Vtuber Orchestrator",
-        date: "Oct 2025 - Present",
-        tags: ["Python", "LangGraph", "WebSockets", "Vue.js", "Live2D"],
-        description: "An autonomous virtual avatar system capable of real-time hearing, thinking, and speaking.",
-        points: [
-          "Engineered a bi-directional 'Speech-to-Text-to-Speech' loop with < 500ms latency.",
-          "Built a Python processing unit using LangChain and LangGraph with MCP (Model Context Protocol) for Discord/Google integrations.",
-          "Developed a reactive frontend using Vue.js and Live2D SDK for real-time lip-sync."
-        ]
-      },
-      {
-        title: "Designia Marketplace",
-        date: "Aug 2025 - Present",
-        tags: ["Django", "Docker", "React", "Stripe", "Microservices"],
-        description: "Multi-vendor furniture platform built on a microservices architecture.",
-        points: [
-          "Containerized backend services using Docker to isolate auth, chat, and payment modules.",
-          "Developed a real-time chat microservice using Django Channels (WebSockets).",
-          "Integrated Stripe Connect to automate complex split payments between platform and sellers."
-        ]
-      },
-      {
         title: "YummiAI",
         date: "Jun 2025 - Present",
         tags: ["React Native", "Django", "Computer Vision", "GCP"],
@@ -49,6 +27,30 @@ export const portfolioData = {
           "Created a computer vision pipeline to analyze food photos and extract caloric data.",
           "Migrated a legacy SQL food database to a modern schema optimized for LLM context.",
           "Deployed scalable backend services on Google Cloud Platform (GCP)."
+        ]
+      },
+      {
+        title: "Designia Marketplace",
+        date: "Aug 2025 - Present",
+        tags: ["Django", "Docker", "React", "Stripe", "Redis", "SQL", "S3"],
+        description: "Multi-vendor furniture platform built with Django and React.",
+        points: [
+          "Containerized backend services using Docker.",
+          "Created secure authentication with JWT, OAuth2 and 2FA.",
+          "Developed a real-time chat using Django Channels (WebSockets and Redis).",
+          "Integrated Stripe Connect to automate complex split payments between platform and sellers."
+
+        ]
+      },
+      {
+        title: "AI Vtuber Orchestrator",
+        date: "Oct 2025 - Present",
+        tags: ["Python", "LangGraph", "WebSockets", "Vue.js", "Live2D"],
+        description: "An autonomous virtual avatar system capable of real-time hearing, thinking, and speaking.",
+        points: [
+          "Engineered a bi-directional 'Speech-to-Text-to-Speech' loop with < 500ms latency.",
+          "Built a Python processing unit using LangChain and LangGraph with MCP (Model Context Protocol) for Discord/Google integrations.",
+          "Developed a reactive frontend using Vue.js and Live2D SDK for real-time lip-sync."
         ]
       },
       {
@@ -66,7 +68,7 @@ export const portfolioData = {
     experience: [
       {
         company: "BEWG.PT",
-        role: "Full Stack Developer",
+        role: " Full Stack Developer Internship",
         date: "Jun 2025 – Jul 2025",
         location: "Lisbon",
         points: [
@@ -78,9 +80,9 @@ export const portfolioData = {
       },
       {
         company: "HRConsulta",
-        role: "Full Stack Developer",
+        role: "Eramus+ Internship for Full Stack Developer",
         date: "May 2025 – Jun 2025",
-        location: "Remote / Malta",
+        location: "Malta",
         points: [
           "Developed two enterprise-grade web applications for the education sector using React.js and PHP.",
           "Implemented Role-Based Access Control (RBAC) to secure sensitive data for 500+ active users.",
@@ -98,7 +100,7 @@ export const portfolioData = {
     hero: {
       role: "Desenvolvedor Full Stack & Engenheiro de IA",
       bio: "Focando na convergência entre arquitetura web escalável e agentes de IA inteligentes. Especialista em Python, React Native e orquestração de LLMs.",
-      location: "Lisboa, Portugal",
+      location: "Amora, Portugal",
       status: "Disponível para Trabalho",
       cta: "Ver Projetos"
     },
@@ -109,6 +111,31 @@ export const portfolioData = {
     },
     projects: [
       {
+        title: "YummiAI",
+        date: "Jun 2025 - Atual",
+        tags: ["React Native", "Django", "Computer Vision", "GCP"],
+        description: "Aplicação móvel de análise nutricional impulsionada por IA.",
+        points: [
+          "Criação de pipeline de visão computacional para analisar fotos de comida e extrair dados calóricos.",
+          "Migração de base de dados SQL legada para um esquema moderno otimizado para contexto de LLM.",
+          "Criação e integração de Notificações Push para engajamento do usuário.",
+          "Implementação de monitoramento e logging através do Mixpanel para garantir alta disponibilidade.",
+          "Deploy de serviços backend escaláveis na Google Cloud Platform (GCP)."
+        ]
+      },
+      {
+        title: "Designia Marketplace",
+        date: "Ago 2025 - Atual",
+        tags: ["Django", "Docker", "React", "Stripe", "Redis", "SQL", "S3"],
+        description: "Plataforma multi-vendedor de mobiliário baseada em microsserviços.",
+        points: [
+          "Containerização de serviços backend usando Docker para isolar módulos de auth, chat e pagamentos.",
+          "Desenvolvimento de microsserviço de chat em tempo real usando Django Channels (WebSockets e Redis).",
+          "Criação de autenticação segura com JWT, OAuth2 e 2FA.",
+          "Integração com Stripe Connect para automatizar pagamentos divididos entre plataforma e vendedores."
+        ]
+      },
+      {
         title: "AI Vtuber Orchestrator",
         date: "Out 2025 - Atual",
         tags: ["Python", "LangGraph", "WebSockets", "Vue.js", "Live2D"],
@@ -117,28 +144,6 @@ export const portfolioData = {
           "Engenharia de um loop bidirecional 'Speech-to-Text-to-Speech' com baixa latência.",
           "Construção de unidade de processamento Python usando LangChain e LangGraph com MCP para integrações Discord/Google.",
           "Frontend reativo desenvolvido com Vue.js e Live2D SDK para sincronia labial em tempo real."
-        ]
-      },
-      {
-        title: "Designia Marketplace",
-        date: "Ago 2025 - Atual",
-        tags: ["Django", "Docker", "React", "Stripe", "Microservices"],
-        description: "Plataforma multi-vendedor de mobiliário baseada em microsserviços.",
-        points: [
-          "Containerização de serviços backend usando Docker para isolar módulos de auth, chat e pagamentos.",
-          "Desenvolvimento de microsserviço de chat em tempo real usando Django Channels (WebSockets).",
-          "Integração com Stripe Connect para automatizar pagamentos divididos entre plataforma e vendedores."
-        ]
-      },
-      {
-        title: "YummiAI",
-        date: "Jun 2025 - Atual",
-        tags: ["React Native", "Django", "Computer Vision", "GCP"],
-        description: "Aplicação móvel de análise nutricional impulsionada por IA.",
-        points: [
-          "Criação de pipeline de visão computacional para analisar fotos de comida e extrair dados calóricos.",
-          "Migração de base de dados SQL legada para um esquema moderno otimizado para contexto de LLM.",
-          "Deploy de serviços backend escaláveis na Google Cloud Platform (GCP)."
         ]
       },
       {
@@ -156,7 +161,7 @@ export const portfolioData = {
     experience: [
       {
         company: "BEWG.PT",
-        role: "Desenvolvedor Full Stack",
+        role: "Estágio Desenvolvedor Full Stack",
         date: "Jun 2025 – Jul 2025",
         location: "Lisboa",
         points: [
@@ -168,7 +173,7 @@ export const portfolioData = {
       },
       {
         company: "HRConsulta",
-        role: "Desenvolvedor Full Stack",
+        role: "Estágio Eramus+ de Desenvolvedor Full Stack",
         date: "Mai 2025 – Jun 2025",
         location: "Remoto / Malta",
         points: [
