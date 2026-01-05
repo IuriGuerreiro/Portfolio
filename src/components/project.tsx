@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { Globe, Smartphone, Link as LinkIcon } from "lucide-react";
 
@@ -26,12 +27,18 @@ type Project = {
 
 interface ProjectsProps {
   project: Project;
+  slug?: string;
 }
 
-export const Project: React.FC<ProjectsProps> = ({ project }) => {
+export const Project: React.FC<ProjectsProps> = ({ project, slug }) => {
     const { lang } = useLanguage();
     return (
         <div className="group relative">
+            {/* Stretched Link */}
+            {slug && (
+                <Link href={`/projects/${slug}`} className="absolute inset-0 z-0" />
+            )}
+
             {/* Decorative hover line */}
             <div className="absolute -left-6 top-0 bottom-0 w-[1px] bg-white scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top hidden md:block"></div>
             
@@ -67,7 +74,7 @@ export const Project: React.FC<ProjectsProps> = ({ project }) => {
 
             {/* Links Section */}
             {project.links && (
-                <div className="flex flex-wrap gap-4 mt-4" onClick={(e) => e.stopPropagation()}>
+                <div className="flex flex-wrap gap-4 mt-4 relative z-10" onClick={(e) => e.stopPropagation()}>
                     {project.links.web && (
                         <a 
                             href={project.links.web} 

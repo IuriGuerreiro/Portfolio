@@ -16,6 +16,11 @@ export default function ProjectsPage(){
     const [selectedImage, setSelectedImage] = useState(0);
 
     const navback = lang === 'en' ? 'Back to Projects' : 'Voltar para Projetos';
+    const overviewTitle = lang === 'en' ? 'Overview' : 'Visão Geral';
+    const videosTitle = lang === 'en' ? 'Videos' : 'Vídeos';
+    const galleryTitle = lang === 'en' ? 'Gallery' : 'Galeria';
+    const achievementsTitle = lang === 'en' ? 'Key Achievements' : 'Principais Conquistas';
+    const techStackTitle = lang === 'en' ? 'Tech Stack' : 'Stack Tecnológico';
 
     if (!projectData) {
         notFound();
@@ -81,7 +86,7 @@ export default function ProjectsPage(){
                     {/* Left Col: Description & Context */}
                     <div className="lg:col-span-2 space-y-12">
                     <div>
-                        <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-6">Overview</h3>
+                        <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-6">{overviewTitle}</h3>
                         <p className="text-xl text-neutral-300 font-light leading-relaxed">
                         {projectData.bigDescription}
                         </p>
@@ -90,7 +95,7 @@ export default function ProjectsPage(){
                     {/* Videos Section */}
                     {projectData.videos && projectData.videos.length > 0 && (
                         <div className="space-y-4">
-                            <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">Videos</h3>
+                            <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">{videosTitle}</h3>
                             {projectData.videos.map((video, i) => (
                                 <div key={i} className="aspect-video bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
                                     <video 
@@ -109,7 +114,7 @@ export default function ProjectsPage(){
                     {/* Images Section */}
                     {projectData.images && projectData.images.length > 0 ? (
                         <div className="space-y-4">
-                            <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">Gallery</h3>
+                            <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest">{galleryTitle}</h3>
                             
                             {/* Main Image Display */}
                             <div className="rounded-lg overflow-hidden border border-neutral-800 bg-neutral-900 relative aspect-video group">
@@ -171,7 +176,7 @@ export default function ProjectsPage(){
                     )}
                     
                     <div>
-                        <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-6">Key Achievements</h3>
+                        <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest mb-6">{achievementsTitle}</h3>
                         <ul className="space-y-4 text-neutral-400 leading-relaxed">
                         {projectData.points?.map((point, i) => (
                             <li key={i} className="flex gap-4">
@@ -186,7 +191,7 @@ export default function ProjectsPage(){
                     {/* Right Col: "Metadata" or Visual Placeholder */}
                     <div className="space-y-8">
                         <div className="p-6 border border-neutral-800 rounded-lg bg-neutral-900/20">
-                            <h3 className="text-sm font-mono text-white uppercase tracking-widest mb-4">Tech Stack</h3>
+                            <h3 className="text-sm font-mono text-white uppercase tracking-widest mb-4">{techStackTitle}</h3>
                             <div className="flex flex-wrap gap-2">
                                 {projectData.tags?.map((tag, i) => (
                                 <span key={i} className="text-xs font-mono px-2 py-1 bg-neutral-900 border border-neutral-800 text-neutral-400">

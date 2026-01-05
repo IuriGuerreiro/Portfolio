@@ -66,9 +66,9 @@ export default function Home() {
           {Object.entries(content.projects)
             .filter(([_, project]) => project.featured)
             .map(([key, project]) => (
-            <Link href={`/projects/${key}`} key={key} className="block group">
-              <Project project={project} />
-            </Link>
+            <div key={key} className="block group">
+              <Project project={project} slug={key} />
+            </div>
           ))}
         </div>
 

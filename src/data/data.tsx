@@ -99,8 +99,10 @@ export const portfolioData = {
             title: "SmoothAim-Pico",
             featured: false,
             date: "Dec 2025 - Jan 2026",
-            images: [
+            videos: [
                 "/projects/pico/1.mp4",
+            ],
+            images: [
                 "/projects/pico/2.jpg",
             ],
             tags: ["C", "Embedded Systems", "Raspberry Pi Pico", "USB HID", "PIO", "TinyUSB",],
@@ -241,8 +243,10 @@ export const portfolioData = {
             title: "SmoothAim-Pico",
             featured: false,
             date: "Dez 2025 - Jan 2026",
-            images: [
+            videos: [
                 "/projects/pico/1.mp4",
+            ],
+            images: [
                 "/projects/pico/2.jpg",
             ],
             tags: ["C", "Sistemas Embarcados", "Raspberry Pi Pico", "USB HID", "PIO", "TinyUSB",],
