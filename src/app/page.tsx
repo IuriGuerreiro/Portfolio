@@ -1,19 +1,25 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { Project } from "@/components/project";
-import { portfolioData } from "@/data/homeData";
+import { portfolioData } from "@/data/data";
 import { useLanguage } from "@/context/LanguageContext";
 import React, { createContext, useContext, useState } from 'react';
 import { Experiences } from "@/components/experiences";
+import { useRouter } from "next/navigation";
 
-import { Github, Mail, Linkedin, Globe, Server, Code, Terminal, Cpu } from 'lucide-react';
+import { Github, Mail, Linkedin, Globe, Server, Code, Terminal, Cpu, ArrowRight} from 'lucide-react';
 
 
 export default function Home() {
   const { lang, setLang } = useLanguage();
   const content = portfolioData[lang];
+  const router = useRouter();
 
+  const goToProjects = () => {
+    router.push('/projects');
+  };
 
   return (
     <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
@@ -34,18 +40,16 @@ export default function Home() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 text-sm font-mono text-neutral-500 border-t border-neutral-900 pt-8">
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 hover:text-white transition-colors ">
             <Globe size={16} />
             {content.hero.location}
           </span>
-          <span className="flex items-center gap-2">
-            <Mail size={16} />
-            iurifernandesguerreiro@gmail.com
-          </span>
-          <span className="flex items-center gap-2">
-            <Github size={16} />
-            github.com/IuriGuerreiro
-          </span>
+          <a href="mailto:iurifernandesguerreiro@gmail.com" className="hover:text-white transition-colors flex items-center gap-2">
+              <Mail size={16} /> iurifernandesguerreiro@gmail.com
+            </a>
+          <a href="https://github.com/IuriGuerreiro" className="hover:text-white transition-colors flex items-center gap-2">
+            <Github size={16} /> github.com/IuriGuerreiro
+          </a>
         </div>
       </section>
 
@@ -59,9 +63,24 @@ export default function Home() {
         </div>
         
         <div className="grid gap-20">
-          {content.projects.map((project, index) => (
-            <Project key={index} project={project} />
+          {Object.entries(content.projects)
+            .filter(([_, project]) => project.featured)
+            .map(([key, project]) => (
+            <Link href={`/projects/${key}`} key={key} className="block group">
+              <Project project={project} />
+            </Link>
           ))}
+        </div>
+
+        {/* SEE MORE BUTTON */}
+        <div className="mt-16 flex justify-center">
+          <button 
+            onClick={goToProjects}
+            className="group flex items-center gap-2 text-sm font-mono text-neutral-400 hover:text-white border border-neutral-800 bg-neutral-900/30 px-6 py-3 rounded hover:border-neutral-600 transition-all duration-300"
+          >
+            {lang === 'en' ? 'View All Projects' : 'Ver Todos os Projetos'}
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </section>
 

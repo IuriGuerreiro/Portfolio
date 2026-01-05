@@ -2,13 +2,26 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { Globe, Smartphone, Link as LinkIcon } from "lucide-react";
 
 type Project = {
     title: string;
+    featured?: boolean;
     date: string;
     description: string;
+    bigDescription?: string;
+    challenges?: string;
+    solution?: string;
     points: string[];
     tags: string[];
+    images?: string[];
+    videos?: string[];
+    links?: {
+        web?: string;
+        ios?: string;
+        android?: string;
+        other?: { name: string; url: string }[];
+    };
 }
 
 interface ProjectsProps {
@@ -44,13 +57,68 @@ export const Project: React.FC<ProjectsProps> = ({ project }) => {
             ))}
             </ul>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map((tag, i) => (
                 <span key={i} className="text-xs font-mono px-3 py-1 bg-neutral-900 border border-neutral-800 text-neutral-400 hover:border-neutral-600 hover:text-white transition-colors cursor-default">
                 {tag}
                 </span>
             ))}
             </div>
+
+            {/* Links Section */}
+            {project.links && (
+                <div className="flex flex-wrap gap-4 mt-4" onClick={(e) => e.stopPropagation()}>
+                    {project.links.web && (
+                        <a 
+                            href={project.links.web} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Globe size={16} />
+                            <span>Website</span>
+                        </a>
+                    )}
+                    {project.links.ios && (
+                        <a 
+                            href={project.links.ios} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Smartphone size={16} />
+                            <span>iOS</span>
+                        </a>
+                    )}
+                    {project.links.android && (
+                        <a 
+                            href={project.links.android} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Smartphone size={16} />
+                            <span>Android</span>
+                        </a>
+                    )}
+                    {project.links.other?.map((link, i) => (
+                        <a 
+                            key={i}
+                            href={link.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <LinkIcon size={16} />
+                            <span>{link.name}</span>
+                        </a>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

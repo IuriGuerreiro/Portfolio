@@ -7,6 +7,7 @@ type Experience = {
     role: string;
     location: string;
     points: string[];
+    tags?: string[];
 }
 
 interface ExperiencesProps {
@@ -26,13 +27,22 @@ export const Experiences: React.FC<ExperiencesProps> = ({ job }) => {
                 <span className="text-neutral-700">•</span>
                 <span>{job.location}</span>
             </div>
-            <ul className="space-y-2 text-neutral-300 text-sm leading-relaxed max-w-3xl">
+            <ul className="space-y-2 text-neutral-300 text-sm leading-relaxed max-w-3xl mb-6">
                 {job.points.map((point, i) => (
                 <li key={i} className="flex gap-2">
                     <span className="text-neutral-600">›</span> {point}
                 </li>
                 ))}
             </ul>
+            {job.tags && (
+                <div className="flex flex-wrap gap-2">
+                    {job.tags.map((tag, i) => (
+                        <span key={i} className="text-xs font-mono px-2 py-1 bg-neutral-900 border border-neutral-800 text-neutral-500 rounded">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

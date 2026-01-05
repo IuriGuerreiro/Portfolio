@@ -2,21 +2,23 @@
 
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { portfolioData } from '@/data/data';
 
 export const NavBar: React.FC = () => {
   const { lang, setLang } = useLanguage();
+  const nav = portfolioData[lang].nav;
 
   return (
     <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md border-b border-neutral-900 z-50">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <div className="text-xl font-bold tracking-tighter hover:text-neutral-400 transition-colors cursor-pointer">
-                IG.
+                <a href="/" className="hover:text-white transition-colors">IG.</a>
             </div>
           
             <div className="flex items-center gap-6">
                 <div className="hidden md:flex gap-6 text-sm text-neutral-500 font-mono">
-                    <a href="#projects" className="hover:text-white transition-colors">{lang === 'en' ? 'Projects' : 'Projetos'}</a>
-                    <a href="#experience" className="hover:text-white transition-colors">{lang === 'en' ? 'Experience' : 'Experiência'}</a>
+                    <a href="#projects" className="hover:text-white transition-colors">{nav.projects}</a>
+                    <a href="/#experience" className="hover:text-white transition-colors">{nav.experience}</a>
                 </div>
                 <button 
                 onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}
