@@ -19,6 +19,7 @@ export const NavBar: React.FC = () => {
                 <div className="hidden md:flex gap-6 text-sm text-neutral-500 font-mono">
                     <a href="/projects" className="hover:text-white transition-colors">{nav.projects}</a>
                     <a href="/#experience" className="hover:text-white transition-colors">{nav.experience}</a>
+                    <a href="/#contact" className="hover:text-white transition-colors">{nav.contact}</a>
                 </div>
                 <button 
                 onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}

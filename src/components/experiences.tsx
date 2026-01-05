@@ -1,7 +1,6 @@
 import React from "react";
 
 type Experience = {
-    title: string;
     company: string;
     date: string;
     role: string;

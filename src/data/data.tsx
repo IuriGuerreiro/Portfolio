@@ -20,21 +20,33 @@ export const portfolioData = {
       stack: "Technical Stack",
     },
     projects: {
+        AiAvatarEngine : {
+            title: "Interactive AI Avatar Engine",
+            featured: true,
+            date: "Oct 2025 - Present",
+            links :{
+                web : "", 
+            },
+            images: [
+                "/projects/AI-Vtuber/1.png", 
+            ],
+            tags: ["Python", "LangGraph", "MCP", "WebSockets", "Faster Whisper", "Vue.js", "Live2D"],
+            description: "Real-time multimodal pipeline powering interactive AI avatars with voice, vision, and tool capabilities.",
+            bigDescription : "A modular AI orchestration engine designed to bring Live2D characters to life through natural interaction. It functions as a central nervous system, processing real-time audio input via local Whisper models, orchestrating cognitive responses using LangGraph (supporting OpenAI, Anthropic, and Local LLMs), and generating synthesized voice with lip-sync data. The system leverages the Model Context Protocol (MCP) to extend the AI's capabilities, allowing it to interact with external environments like Discord or the Web.",
+            points: [
+              "Engineered a low-latency Speech-to-Text-to-Speech (STS) pipeline processing audio locally via Faster Whisper and modular TTS engines (XTTS, ElevenLabs).",
+              "Architected a Model Agnostic Core using LangChain & LangGraph, enabling seamless switching between cloud providers and local LLMs.",
+              "Implemented Model Context Protocol (MCP) support, creating custom servers for Discord integration, web searching, and computer vision capabilities.",
+              "Developed a Real-time WebSocket API to stream audio, text, and control events bi-directionally between the Python backend and the frontend.",
+              "Built a Vue.js & Live2D Frontend that renders the avatar and performs real-time lip-syncing driven by the audio flux.",
+            ],
+        },
         Designia : {
             title: "Designia",
             featured: true,
             date: "Aug 2025 - Jan 2026",
             links :{
                 web : "",
-                other: [
-                    {
-                        name: "Backend code",
-                        url: "" },
-                    { 
-                        name: "Frontend code", 
-                        url: ""
-                    },
-                ]
             },
             images: [
                 "/projects/designia/1.png",
@@ -81,8 +93,8 @@ export const portfolioData = {
             ],
         },
         ClothingAI : {
-            title: "ClothingAi",
-            featured: true,
+            title: "ClothingAI",
+            featured: false,
             date: "Aug 2025 - Present",
             tags: ["React Native", "Expo", "Typescript", "Supabase", "Edge Functions","Generative AI", "MixPanel", "SuperWall"],
             description: "AI-powered virtual try-on and outfit generation mobile app using Nano Banana.",
@@ -125,22 +137,33 @@ export const portfolioData = {
         location: "Lisbon",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
         points: [
-          "Built a device monitoring dashboard using Laravel, Django, and MySQL for 200+ devices.",
-          "Reduced network downtime by 60% through the integration of real-time alerting APIs (SSH, Action1).",
-          "Optimized database architecture to support concurrent monitoring, improving reliability.",
-          "Upgraded physical network infrastructure (cabling/provisioning) to improve connectivity."
+          "Engineered a centralized IoT monitoring dashboard integrating Laravel and Django to visualize real-time health metrics for 200+ network devices.",
+          "Developed a custom data integration layer atop the existing enterprise MySQL infrastructure to enable real-time device monitoring.",
+          "Modernized physical network infrastructure through strategic cabling and provisioning, enhancing site-wide connectivity and stability."
         ]
       },
       {
         company: "HRConsulta",
-        role: "Eramus+ Internship for Full Stack Developer",
+        role: "Erasmus+ Internship for Full Stack Developer",
         date: "May 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
         points: [
-          "Developed two enterprise-grade web applications for the education sector using React.js and PHP.",
-          "Implemented Role-Based Access Control (RBAC) to secure sensitive data for 500+ active users.",
-          "Maintained strict version control and code integrity using Git."
+          "Spearheaded the full-stack development of two educational management platforms using React.js and PHP, digitizing manual workflows for the client.",
+          "Designed and implemented a granular Role-Based Access Control (RBAC) system to ensure secure data access.",
+          "Standardized Git workflows and version control practices within the development team to ensure code integrity and streamline collaboration."
+        ]
+      },
+      {
+        company: "BEWG.PT",
+        role: "Full Stack Developer Internship",
+        date: "Jun 2024 – Aug 2024",
+        location: "Lisbon",
+        tags: ["php", "laravel", "mySQL", "SQL"],
+        points: [
+          "Built a project management web application with PHP (Laravel) and MySQL, streamlining team coordination for 50+ employees and boosting productivity.",
+          "Implemented complete database design with MySQL and SQL optimization, creating optimized relationships and indexing strategies that enhanced query performance.",
+          "Delivered network infrastructure mapping and automated device configuration systems, improving network management efficiency."
         ]
       }
     ]
@@ -164,21 +187,33 @@ export const portfolioData = {
       stack: "Stack Técnico",
     },
     projects: {
+        AiAvatarEngine : {
+            title: "Motor de Avatar IA Interativo",
+            featured: true,
+            date: "Out 2025 - Presente",
+            links :{
+                web : "", 
+            },
+            images: [
+                "/projects/AI-Vtuber/1.png",
+            ],
+            tags: ["Python", "LangGraph", "MCP", "WebSockets", "Faster Whisper", "Vue.js", "Live2D"],
+            description: "Pipeline multimodal em tempo real que alimenta avatares de IA interativos com voz, visão e ferramentas.",
+            bigDescription : "Um motor de orquestração de IA modular projetado para dar vida a personagens Live2D através de interação natural. Funciona como um sistema nervoso central, processando áudio em tempo real via modelos Whisper locais, orquestrando respostas cognitivas usando LangGraph (suportando OpenAI, Anthropic e LLMs Locais) e gerando voz sintetizada com dados de lip-sync. O sistema aproveita o Model Context Protocol (MCP) para estender as capacidades da IA, permitindo interações com ambientes externos como Discord ou a Web.",
+            points: [
+              "Engenhei uma pipeline Speech-to-Text-to-Speech (STS) de baixa latência processando áudio localmente via Faster Whisper e motores TTS modulares (XTTS, ElevenLabs).",
+              "Arquitetei um Núcleo Agnóstico a Modelos usando LangChain & LangGraph, permitindo troca fluida entre provedores de nuvem e LLMs locais.",
+              "Implementei suporte ao Model Context Protocol (MCP), criando servidores personalizados para integração com Discord, pesquisa na web e capacidades de visão computacional.",
+              "Desenvolvi uma API WebSocket em Tempo Real para transmitir eventos de áudio, texto e controle bidirecionalmente entre o backend Python e o frontend.",
+              "Construí um Frontend Vue.js & Live2D que renderiza o avatar e executa lip-sync em tempo real baseado no fluxo de áudio.",
+            ],
+        },
         Designia : {
             title: "Designia Marketplace",
             featured: true,
             date: "Ago 2025 - Presente",
             links :{
                 web : "",
-                other: [
-                    {
-                        name: "Código Backend",
-                        url: "" },
-                    { 
-                        name: "Código Frontend", 
-                        url: ""
-                    },
-                ]
             },
             images: [
                 "/projects/designia/1.png",
@@ -225,11 +260,11 @@ export const portfolioData = {
             ],
         },
         ClothingAI : {
-            title: "ClothingAi",
-            featured: true,
+            title: "ClothingAI",
+            featured: false,
             date: "Ago 2025 - Presente",
             tags: ["React Native", "Expo", "Typescript", "Supabase", "Edge Functions","IA Generativa", "MixPanel", "SuperWall"],
-            description: "Aplicação móvel de provador virtual e geração de outfits impulsionada por IA usando Gemini 2.5Flash.",
+            description: "Aplicação móvel de provador virtual e geração de outfits impulsionada por IA usando Nano Banana.",
             bigDescription: "ClothingAI é uma aplicação móvel de ponta que aproveita o modelo multimodal Nano Banana do Google para fornecer uma experiência de provador virtual e geração de outfits personalizados. Construído com React Native e Expo, oferece uma experiência multiplataforma perfeita. O aplicativo integra Supabase para um backend robusto, lidando com autenticação, atualizações de banco de dados em tempo real e armazenamento seguro de arquivos. Possui um sistema de crédito sofisticado e recursos premium gerenciados via Superwall, com análises de utilizador abrangentes impulsionadas pelo Mixpanel.",
             points: [
                 "Implementei Provador Virtual com IA & Geração de Outfits usando o modelo multimodal Nano Banana via Supabase Edge Functions, permitindo que os utilizadores visualizem roupas em suas próprias fotos.",
@@ -269,36 +304,35 @@ export const portfolioData = {
         location: "Lisboa",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
         points: [
-          "Construção de dashboard de monitoramento usando Laravel, Django e MySQL para 200+ dispositivos.",
-          "Redução do tempo de inatividade da rede em 60% através da integração de APIs de alerta em tempo real (SSH, Action1).",
-          "Otimização da arquitetura da base de dados para suportar monitoramento simultâneo e melhorar a confiabilidade.",
-          "Atualização da infraestrutura de rede física (cabeamento/provisionamento) para melhorar a conectividade."
+          "Arquitetei um dashboard centralizado de monitoramento IoT integrando Laravel e Django para visualizar métricas de saúde em tempo real de mais de 200 dispositivos.",
+          "Desenvolvi uma camada de integração de dados sobre a infraestrutura MySQL empresarial existente para permitir o monitoramento de dispositivos em tempo real.",
+          "Modernizei a infraestrutura de rede física através de cabeamento e provisionamento estratégico, melhorando significativamente a conectividade e estabilidade do local."
         ]
       },
       {
         company: "HRConsulta",
-        role: "Estágio Eramus+ de Desenvolvedor Full Stack",
+        role: "Estágio Erasmus+ de Desenvolvedor Full Stack",
         date: "Mai 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
         points: [
-          "Desenvolvimento de duas aplicações web empresariais para o setor educacional usando React.js e PHP.",
-          "Implementação de Controle de Acesso Baseado em Funções (RBAC).",
-          "Manutenção rigorosa de controle de versão e integridade de código usando Git."
+          "Liderei o desenvolvimento full-stack de duas plataformas de gestão educacional usando React.js e PHP, digitalizando fluxos de trabalho manuais para o cliente.",
+          "Projetei e implementei um sistema granular de Controle de Acesso Baseado em Funções (RBAC) para garantir o acesso seguro aos dados.",
+          "Padronizei fluxos de trabalho Git e práticas de controle de versão dentro da equipa de desenvolvimento para garantir a integridade do código e otimizar a colaboração."
         ]
       },
       {
         company: "BEWG.PT",
         role: "Estágio Desenvolvedor Full Stack",
-        date: "Jun 2024 – Jul 2024",
+        date: "Jun 2024 – Ago 2024",
         location: "Lisboa",
-        tags: ["laravel", "mySQL", "git"],
+        tags: ["php", "laravel", "mySQL", "SQL"],
         points: [
-          "",
-          "",
-          "",
+          "Construí uma aplicação web de gestão de projetos com PHP (Laravel) e MySQL, otimizando a coordenação de equipa para mais de 50 funcionários e aumentando a produtividade.",
+          "Implementei o design completo da base de dados com MySQL e otimização SQL, criando relacionamentos otimizados e estratégias de indexação que melhoraram o desempenho das consultas.",
+          "Entreguei mapeamento de infraestrutura de rede e sistemas automatizados de configuração de dispositivos, melhorando a eficiência da gestão de rede."
         ]
-      },
+      }
     ]
   }
 };

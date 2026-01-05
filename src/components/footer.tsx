@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <div>© {new Date().getFullYear()} Iuri Guerreiro. {RightsText}</div>
             <div className="flex gap-6">
                 <a href="https://github.com/IuriGuerreiro" className="hover:text-white transition-colors">GitHub</a>
-                <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/iuri-guerreiro-379a85273/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
                 <a href="mailto:iurifernandesguerreiro@gmail.com" className="hover:text-white transition-colors">Email</a>
             </div>
             </footer>

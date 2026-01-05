@@ -39,6 +39,16 @@ export default function Home() {
           {content.hero.bio}
         </p>
         
+        <div className="flex flex-wrap gap-4 mb-12">
+          <button 
+            onClick={goToProjects}
+            className="group flex items-center gap-2 px-6 py-3 bg-white text-black font-mono text-sm font-bold rounded hover:bg-neutral-200 transition-all"
+          >
+            {content.hero.cta}
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+        
         <div className="flex flex-col sm:flex-row gap-6 text-sm font-mono text-neutral-500 border-t border-neutral-900 pt-8">
           <span className="flex items-center gap-2 hover:text-white transition-colors ">
             <Globe size={16} />
@@ -161,6 +171,43 @@ export default function Home() {
                   <span>Git / GitHub Actions</span>
                   <span>Linux</span>
               </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section id="contact" className="mb-32">
+        <div className="flex items-center gap-4 mb-16">
+          <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
+            04. {content.nav.contact}
+          </h3>
+          <div className="h-[1px] w-full bg-neutral-900"></div>
+        </div>
+
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+            {lang === 'en' ? "Let's build something together" : "Vamos construir algo juntos"}
+          </h2>
+          <p className="text-neutral-400 font-light mb-10 leading-relaxed">
+            {lang === 'en' 
+              ? "I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!" 
+              : "Estou atualmente à procura de novas oportunidades. Se tiver uma pergunta ou apenas quiser dizer olá, a minha caixa de entrada está sempre aberta!"}
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="mailto:iurifernandesguerreiro@gmail.com" 
+              className="flex items-center gap-2 px-8 py-4 bg-white text-black font-mono text-sm font-bold rounded hover:bg-neutral-200 transition-all"
+            >
+              <Mail size={18} /> {lang === 'en' ? 'Say Hello' : 'Dizer Olá'}
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/iuri-guerreiro-379a85273/" 
+              target="_blank"
+              className="flex items-center gap-2 px-8 py-4 border border-neutral-800 bg-neutral-900/30 text-white font-mono text-sm rounded hover:border-neutral-600 transition-all"
+            >
+              <Linkedin size={18} /> LinkedIn
+            </a>
           </div>
         </div>
       </section>
