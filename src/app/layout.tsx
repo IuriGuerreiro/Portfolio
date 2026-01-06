@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Iuri Guerreiro | Full Stack & AI Engineer",
+  title: "Iuri Guerreiro | Full Stack Developer",
   description: "Portfolio of Iuri Guerreiro - Specializing in Python, AI orchestration, and scalable web architecture.",
 };
 

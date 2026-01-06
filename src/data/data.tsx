@@ -8,7 +8,7 @@ export const portfolioData = {
       contact: "Contact"
     },
     hero: {
-      role: "Full Stack Developer & AI Engineer",
+      role: "Full Stack Developer",
       bio: "Bridging the gap between scalable web architecture and intelligent AI agents. Specializing in Python, React Native, and LLM orchestration.",
       location: "Amora, Portugal",
       status: "Open to Work",
@@ -175,7 +175,7 @@ export const portfolioData = {
       contact: "Contato"
     },
     hero: {
-      role: "Desenvolvedor Full Stack & Engenheiro de IA",
+      role: "Desenvolvedor Full Stack",
       bio: "Focando na convergência entre arquitetura web escalável e agentes de IA inteligentes. Especialista em Python, React Native e orquestração de LLMs.",
       location: "Amora, Portugal",
       status: "Disponível para Trabalho",
