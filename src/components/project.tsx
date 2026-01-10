@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
-import { Globe, Smartphone, Link as LinkIcon } from "lucide-react";
+import { Globe, Smartphone, Link as LinkIcon, ArrowRight } from "lucide-react";
 
 type Project = {
     title: string;
@@ -32,6 +32,8 @@ interface ProjectsProps {
 
 export const Project: React.FC<ProjectsProps> = ({ project, slug }) => {
     const { lang } = useLanguage();
+    const readMore = lang === 'en' ? 'Read More' : 'Ler Mais';
+    
     return (
         <div className="group relative">
             {/* Stretched Link */}
@@ -128,17 +130,20 @@ export const Project: React.FC<ProjectsProps> = ({ project, slug }) => {
                     </>
                 )}
 
-                {/* Read More Button */}
-                {slug && (
+            </div>
+
+            {slug && (
+                 <div className="mt-6 relative z-10">
                     <Link
                         href={`/projects/${slug}`}
-                        className="ml-auto px-4 py-2 text-sm font-mono bg-neutral-900 border border-neutral-800 text-neutral-400 hover:border-white hover:text-white transition-all duration-300 z-10 relative"
+                        className="inline-flex items-center gap-2 text-sm font-mono text-neutral-400 hover:text-white transition-colors group"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        {lang === 'pt' ? 'Ler Mais →' : 'Read More →'}
+                        {readMore}
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
-                )}
-            </div>
+                </div>
+            )}
         </div>
     );
 }
