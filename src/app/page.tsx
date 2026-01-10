@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Project } from "@/components/project";
 import { portfolioData } from "@/data/data";
 import { useLanguage } from "@/context/LanguageContext";
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Experiences } from "@/components/experiences";
 import { useRouter } from "next/navigation";
 
@@ -16,6 +16,22 @@ export default function Home() {
   const { lang } = useLanguage();
   const content = portfolioData[lang];
   const router = useRouter();
+
+  useEffect(() => {
+    // Handle hash scrolling on mount because content might be deferred (e.g. by Wrapper)
+    const hash = window.location.hash;
+    if (hash) {
+      // Use a small timeout to ensure the DOM is fully ready and painted
+      const timer = setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const goToProjects = () => {
     router.push('/projects');
@@ -95,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE SECTION */}
-      <section id="experience" className="mb-32 animate-fade-in-up [animation-delay:200ms] opacity-0">
+      <section id="experience" className="mb-32 animate-fade-in-up [animation-delay:200ms] opacity-0 scroll-mt-28">
            <div className="flex items-center gap-4 mb-16">
              <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
               02. {content.sectionTitles.experience}
@@ -177,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="mb-32 animate-fade-in-up [animation-delay:400ms] opacity-0">
+      <section id="contact" className="mb-32 animate-fade-in-up [animation-delay:400ms] opacity-0 scroll-mt-28">
         <div className="flex items-center gap-4 mb-16">
           <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
             04. {content.nav.contact}

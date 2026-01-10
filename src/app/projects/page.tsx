@@ -11,7 +11,7 @@ export default function ProjectsPage(){
     const projects = portfolioData[lang].projects;
 
     return (
-        <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
+        <main className="max-w-5xl mx-auto px-6 pt-32 pb-24 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-16">
                 {lang === 'en' ? 'All Projects' : 'Todos os Projetos'}
             </h1>

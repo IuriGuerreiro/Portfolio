@@ -50,7 +50,7 @@ export default function ProjectClient() {
 
     return (
         <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
-            <div className="fade-in animate-in slide-in-from-bottom-4 duration-500">
+            <div className="animate-fade-in-up">
                 <button 
                     onClick={() => router.back()}
                     className="group flex items-center gap-2 text-sm font-mono text-neutral-500 hover:text-white mb-12 transition-colors"
