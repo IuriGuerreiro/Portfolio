@@ -36,7 +36,7 @@ export const portfolioData = {
             ],
         },
         Designia : {
-            title: "Designia",
+            title: "Designia AR",
             featured: true,
             date: "Aug 2025 - Jan 2026",
             links :{
@@ -48,11 +48,12 @@ export const portfolioData = {
                 "/projects/designia/3.png",
                 "/projects/designia/4.png",
             ],
-            tags: ["Python", "Django", "TypeScript", "React 19", "Docker", "AWS", "Stripe Connect", "WebSockets"],
-            description: "Multi-vendor furniture platform built with Django and React.",
-            bigDescription : "Designia is a comprehensive furniture marketplace platform designed to connect multiple vendors with customers through a seamless online shopping experience. The platform is built using Django for the backend and React 19 for the frontend, ensuring a robust and responsive user interface. Key features include secure user authentication, real-time chat functionality, and integrated payment processing via Stripe Connect.",
+            tags: ["Python", "Django", "TypeScript", "React 19", "React Native", "AR", "Docker", "AWS", "Stripe Connect", "WebSockets"],
+            description: "AR-Powered Multi-vendor furniture marketplace.",
+            bigDescription : "Designia is a next-generation furniture marketplace that bridges the gap between digital browsing and physical visualization through Augmented Reality (AR). The ecosystem consists of a high-performance web marketplace for vendors and customers, and a specialized AR mobile application that allows users to project products into their real-world environment. It features a scalable DDD-based backend, real-time communication, and complex multi-party financial management via Stripe Connect.",
             points: [
               "Architected a scalable Marketplace backend using Domain-Driven Design (DDD) to handle complex multi-party financial transactions.",
+              "Developed a companion Mobile App (React Native) focused on AR furniture visualization, allowing users to preview items in their physical space.",
               "Created a Real-Time Event Bus using Django Channels and Redis (WebSockets) for instant messaging and live notifications.",
               "Integrated Stripe Connect to automate complex split payments, commission calculations, and seller payouts.",
               "Built a Next-Gen Frontend using React 19, Vite 7, and TailwindCSS 4, prioritizing performance and developer experience.",
@@ -125,11 +126,33 @@ export const portfolioData = {
     },
     experience: [
       {
+        id: "seixal-criativo",
+        company: "Seixal Criativo",
+        role: "Teacher Assistant (Freelance)",
+        date: "Dec 2025 – Present",
+        location: "Seixal, Portugal",
+        tags: ["Teaching", "AR", "Unity", "VR", "Meta Quest 3", "Generative AI"],
+        points: [
+          "Assisted in teaching classes on Augmented Reality (AR) using Unity.",
+          "Instructed students on Virtual Reality (VR) development with Meta Quest 3.",
+          "Taught Applied AI and Generative AI concepts for project creation."
+        ]
+      },
+      {
+        id: "bewg-2025",
         company: "BEWG.PT",
         role: "Full Stack Developer (Curricular Internship)",
         date: "Jun 2025 – Jul 2025",
         location: "Lisbon",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
+        bigDescription: "Returning to BEWG for a second curricular internship, I was entrusted with engineering 'Watchtower', a mission-critical centralized IoT and infrastructure monitoring dashboard. This system now provides real-time visibility into the health and status of the company's entire IT ecosystem, encompassing Servers, Network Infrastructure (Switches/APs), employee PCs, and active Alerts. I built the solution to track server/PC uptime and resources, monitor switch port usage and network traffic across multiple regional sites, and integrated an alerting system for proactive issue resolution. The tool has significantly reduced response times to network outages and streamlined daily asset management operations.",
+        images: [
+                "/experience/bewg2025/1.png",
+                "/experience/bewg2025/2.png",
+                "/experience/bewg2025/3.png",
+                "/experience/bewg2025/4.png",
+                "/experience/bewg2025/5.png",
+            ],
         points: [
           "Engineered a centralized IoT monitoring dashboard integrating Laravel and Django to visualize real-time health metrics for 200+ network devices, reducing network downtime by 20%.",
           "Developed a custom data integration layer atop the existing enterprise MySQL infrastructure to enable real-time device monitoring.",
@@ -137,11 +160,44 @@ export const portfolioData = {
         ]
       },
       {
+        id: "hr-consulta",
         company: "HRConsulta",
         role: "Full Stack Developer (Erasmus+ Curricular Internship)",
         date: "May 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
+        bigDescription: "During my Erasmus+ international internship in Malta at HRConsulta, I was responsible for the full development lifecycle of two distinct web platforms. The first project, TETRA, focused on managing educational solutions and teacher training (CPDs), where I implemented a robust administrative panel for course and enrollment management. The second project, Level Academy, was targeted at the Esports sector, requiring an immersive and dynamic visual interface for managing tournaments, articles, and summer camps. For both projects, I developed responsive public interfaces and custom back-offices (CRUD) using PHP and MySQL, allowing the administration team to autonomously manage content and metrics.",
+        images: [
+                "/experience/hrconsulta/tetra-1.png",
+                "/experience/hrconsulta/tetra-2.png",
+                "/experience/hrconsulta/tetra-3.png",
+                "/experience/hrconsulta/tetra-4.png",
+                "/experience/hrconsulta/level-1.png",
+                "/experience/hrconsulta/level-2.png",
+                "/experience/hrconsulta/level-3.png",
+                "/experience/hrconsulta/level-4.png",
+                "/experience/hrconsulta/level-5.png",
+            ],
+        links :{
+            other:[
+              {
+                name: "Tetra Website",
+                url: "https://tetra.com.mt/",
+              },
+              {
+                name: "Tetra repository",
+                url: "https://github.com/IuriGuerreiro/Tetra",
+              },
+              {
+                name: "level academy Website",
+                url: "https://levelacademy.com.mt/",
+              },
+              {
+                name: "level academy repository",
+                url: "https://github.com/Lucas-R14/Level-Academy-",
+              }
+            ]
+        },
         points: [
           "Spearheaded the full-stack development of two educational management platforms using React.js and PHP, digitizing manual workflows and reducing administrative processing time by 50%.",
           "Designed and implemented a granular Role-Based Access Control (RBAC) system to ensure secure data access.",
@@ -149,6 +205,7 @@ export const portfolioData = {
         ]
       },
       {
+        id: "bewg-2024",
         company: "BEWG.PT",
         role: "Full Stack Developer (Curricular Internship)",
         date: "Jun 2024 – Aug 2024",
@@ -286,11 +343,33 @@ export const portfolioData = {
     },
     experience: [
       {
+        id: "seixal-criativo",
+        company: "Seixal Criativo",
+        role: "Assistente de Professor (Freelance)",
+        date: "Dez 2025 – Presente",
+        location: "Seixal, Portugal",
+        tags: ["Ensino", "AR", "Unity", "VR", "Meta Quest 3", "IA Generativa"],
+        points: [
+          "Ajudei a ensinar e lecionar aulas sobre Realidade Aumentada (AR) com Unity.",
+          "Instruí sobre Realidade Virtual (VR) com Meta Quest 3.",
+          "Ensinei IA Aplicacional e Generativa para criação de projetos."
+        ]
+      },
+      {
+        id: "bewg-2025",
         company: "BEWG.PT",
         role: "Desenvolvedor Full Stack (Estágio Curricular)",
         date: "Jun 2025 – Jul 2025",
         location: "Lisboa",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
+        bigDescription: "Regressando à BEWG para um segundo estágio curricular, fui incumbido de desenvolver o 'Watchtower', um dashboard centralizado para monitorização crítica de IoT e infraestrutura. O sistema fornece agora visibilidade em tempo real sobre a saúde de todo o ecossistema de TI da empresa, abrangendo Servidores, Infraestrutura de Rede (Switches/APs), PCs dos colaboradores e Alertas ativos. A solução permite o acompanhamento do tempo de atividade e recursos, monitorização do tráfego de rede em múltiplos locais e inclui um sistema de alertas integrado. Esta ferramenta reduziu drasticamente os tempos de resposta a falhas de rede e otimizou as operações diárias de gestão de ativos.",
+        images: [
+                "/experience/bewg2025/1.png",
+                "/experience/bewg2025/2.png",
+                "/experience/bewg2025/3.png",
+                "/experience/bewg2025/4.png",
+                "/experience/bewg2025/5.png",
+            ],
         points: [
           "Arquitetei um dashboard centralizado de monitoramento IoT integrando Laravel e Django para visualizar métricas de saúde em tempo real de mais de 200 dispositivos, reduzindo o tempo de inatividade da rede em 20%.",
           "Desenvolvi uma camada de integração de dados sobre a infraestrutura MySQL empresarial existente para permitir o monitoramento de dispositivos em tempo real.",
@@ -298,11 +377,44 @@ export const portfolioData = {
         ]
       },
       {
+        id: "hr-consulta",
         company: "HRConsulta",
         role: "Desenvolvedor Full Stack (Estágio Curricular Erasmus+)",
         date: "Mai 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
+        bigDescription: "Durante o meu estágio internacional Erasmus+ em Malta na HRConsulta, fui responsável pelo ciclo completo de desenvolvimento de duas plataformas web distintas. O primeiro projeto, TETRA, focou-se na gestão de soluções educativas e formação de professores (CPDs), onde implementei um painel administrativo robusto para a gestão de cursos e inscrições. O segundo projeto, Level Academy, foi direcionado para o setor de Esports, exigindo uma interface visual imersiva e dinâmica para a gestão de torneios, artigos e campos de verão. Em ambos os projetos, desenvolvi interfaces públicas responsivas e back-offices personalizados (CRUD) utilizando PHP e MySQL, permitindo à equipa de administração gerir conteúdos e métricas de forma autónoma.",
+        images: [
+                "/experience/hrconsulta/tetra-1.png",
+                "/experience/hrconsulta/tetra-2.png",
+                "/experience/hrconsulta/tetra-3.png",
+                "/experience/hrconsulta/tetra-4.png",
+                "/experience/hrconsulta/level-1.png",
+                "/experience/hrconsulta/level-2.png",
+                "/experience/hrconsulta/level-3.png",
+                "/experience/hrconsulta/level-4.png",
+                "/experience/hrconsulta/level-5.png",
+            ],
+        links :{
+            other:[
+              {
+                name: "Tetra Website",
+                url: "https://tetra.com.mt/",
+              },
+              {
+                name: "Tetra repository",
+                url: "https://github.com/IuriGuerreiro/Tetra",
+              },
+              {
+                name: "level academy Website",
+                url: "https://levelacademy.com.mt/",
+              },
+              {
+                name: "level academy repository",
+                url: "https://github.com/Lucas-R14/Level-Academy-",
+              }
+            ]
+        },
         points: [
           "Liderei o desenvolvimento full-stack de duas plataformas de gestão educacional usando React.js e PHP, digitalizando fluxos de trabalho manuais e reduzindo o tempo de processamento administrativo em 50%.",
           "Projetei e implementei um sistema granular de Controle de Acesso Baseado em Funções (RBAC) para garantir o acesso seguro aos dados.",
@@ -310,11 +422,13 @@ export const portfolioData = {
         ]
       },
       {
+        id: "bewg-2024",
         company: "BEWG.PT",
         role: "Desenvolvedor Full Stack (Estágio Curricular)",
         date: "Jun 2024 – Ago 2024",
         location: "Lisboa",
         tags: ["php", "laravel", "mySQL", "SQL"],
+        bigDescription: "",
         points: [
           "Construí uma aplicação web de gestão de projetos com PHP (Laravel) e MySQL, otimizando a coordenação de equipa para mais de 50 funcionários e reduzindo a sobrecarga de acompanhamento de projetos em 40%.",
           "Implementei o design completo da base de dados com MySQL e otimização SQL, criando relacionamentos otimizados e estratégias de indexação.",

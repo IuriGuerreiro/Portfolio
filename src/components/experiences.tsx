@@ -1,12 +1,24 @@
 import React from "react";
+import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 type Experience = {
+    id: string;
     company: string;
     date: string;
     role: string;
     location: string;
     points: string[];
     tags?: string[];
+    images?: string[];
+    bigDescription?: string;
+    links?: {
+        web?: string;
+        ios?: string;
+        android?: string;
+        other?: { name: string; url: string }[];
+    };
 }
 
 interface ExperiencesProps {
@@ -14,6 +26,8 @@ interface ExperiencesProps {
 }
 
 export const Experiences: React.FC<ExperiencesProps> = ({ job }) => {
+    const { lang } = useLanguage();
+    const readMore = lang === 'en' ? 'Read More' : 'Ler Mais';
 
     return (
         <div className="md:pl-6 border-l-0 md:border-l border-neutral-800 md:hover:border-white transition-colors duration-300">
@@ -40,6 +54,17 @@ export const Experiences: React.FC<ExperiencesProps> = ({ job }) => {
                             {tag}
                         </span>
                     ))}
+                </div>
+            )}
+            {((job.images && job.images.length > 0) || job.bigDescription) && (
+                <div className="mt-6">
+                    <Link
+                        href={`/experience/${job.id}`}
+                        className="inline-flex items-center gap-2 text-sm font-mono text-neutral-400 hover:text-white transition-colors group"
+                    >
+                        {readMore}
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
                 </div>
             )}
         </div>
