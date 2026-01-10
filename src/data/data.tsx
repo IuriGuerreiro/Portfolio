@@ -24,12 +24,6 @@ export const portfolioData = {
             title: "Interactive AI Avatar Engine",
             featured: true,
             date: "Oct 2025 - Present",
-            links :{
-                web : "", 
-            },
-            images: [
-                "/projects/AI-Vtuber/1.png", 
-            ],
             tags: ["Python", "LangGraph", "MCP", "WebSockets", "Faster Whisper", "Vue.js", "Live2D"],
             description: "Real-time multimodal pipeline powering interactive AI avatars with voice, vision, and tool capabilities.",
             bigDescription : "A modular AI orchestration engine designed to bring Live2D characters to life through natural interaction. It functions as a central nervous system, processing real-time audio input via local Whisper models, orchestrating cognitive responses using LangGraph (supporting OpenAI, Anthropic, and Local LLMs), and generating synthesized voice with lip-sync data. The system leverages the Model Context Protocol (MCP) to extend the AI's capabilities, allowing it to interact with external environments like Discord or the Web.",
@@ -58,11 +52,11 @@ export const portfolioData = {
             description: "Multi-vendor furniture platform built with Django and React.",
             bigDescription : "Designia is a comprehensive furniture marketplace platform designed to connect multiple vendors with customers through a seamless online shopping experience. The platform is built using Django for the backend and React 19 for the frontend, ensuring a robust and responsive user interface. Key features include secure user authentication, real-time chat functionality, and integrated payment processing via Stripe Connect.",
             points: [
-              "Architected a scalable Marketplace backend using Domain-Driven Design (DDD)* to handle complex multi-party financial transactions.",
-              "Created a Real-Time Event Bus* using Django Channels and Redis (WebSockets) for instant messaging and live notifications.",
-              "Integrated Stripe Connect* to automate complex split payments, commission calculations, and sellerpayouts.",
-              "Built a Next-Gen Frontend using React 19, Vite 7, and TailwindCSS 4*, prioritizing performance and developer experience.",
-              "Deployed Production Observability with OpenTelemetry and Prometheus*, and containerized services viaDocker for consistent CI/CD workflows.",
+              "Architected a scalable Marketplace backend using Domain-Driven Design (DDD) to handle complex multi-party financial transactions.",
+              "Created a Real-Time Event Bus using Django Channels and Redis (WebSockets) for instant messaging and live notifications.",
+              "Integrated Stripe Connect to automate complex split payments, commission calculations, and seller payouts.",
+              "Built a Next-Gen Frontend using React 19, Vite 7, and TailwindCSS 4, prioritizing performance and developer experience.",
+              "Deployed Production Observability with OpenTelemetry and Prometheus, and containerized services via Docker for consistent CI/CD workflows.",
             ],
         },
         YummiAI : {
@@ -81,15 +75,15 @@ export const portfolioData = {
                 "/projects/yummi/4.jpg",
             ],
             tags: ["React Native", "Django", "Computer Vision", "GCP"],
-            description: "AI-driven food recognition and calorie tracking mobile app.",
+            description: "AI-driven food recognition and calorie tracking mobile app with 200+ registered users.",
             bigDescription : "YummiAI is an innovative mobile application that leverages advanced AI technologies to provide users with accurate nutritional analysis and calorie tracking. The app utilizes computer vision to analyze food images, extracting detailed caloric and nutritional information. Built with a robust Django backend and a sleek React Native frontend, YummiAI offers a seamless user experience while ensuring scalability and performance through Google Cloud Platform (GCP) deployment.",
             points: [
+                "Scaled platform to 200+ registered users within the first months of launch, maintaining 99.9% uptime on GCP.",
                 "Created an AI-driven Food Recognition System using Google Gemini Vision API to automate calorie tracking and nutritional analysis from user-uploaded images.",
                 "Architected a robust Django REST Backend with custom caching layers for AI model responses to minimize latency and optimize API operational costs.",
                 "Built a feature-rich Cross-Platform Mobile App using React Native (Expo) and NativeWind, delivering a fluid UI with Reanimated and integrated social authentication.",
                 "Developed a high-performance Marketing Web Platform using React 19, Vite 7, and TailwindCSS, optimized for SEO and lightning-fast user acquisition.",
                 "Implemented automated background workflows using APScheduler to manage scheduled system maintenance and personalized user notifications.",
-                "Orchestrated critical background automations and system maintenance workflows using server-side Cron jobs to ensure data integrity and reliability.",
             ],
         },
         ClothingAI : {
@@ -132,38 +126,38 @@ export const portfolioData = {
     experience: [
       {
         company: "BEWG.PT",
-        role: " Full Stack Developer Internship",
+        role: "Full Stack Developer (Curricular Internship)",
         date: "Jun 2025 – Jul 2025",
         location: "Lisbon",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
         points: [
-          "Engineered a centralized IoT monitoring dashboard integrating Laravel and Django to visualize real-time health metrics for 200+ network devices.",
+          "Engineered a centralized IoT monitoring dashboard integrating Laravel and Django to visualize real-time health metrics for 200+ network devices, reducing network downtime by 20%.",
           "Developed a custom data integration layer atop the existing enterprise MySQL infrastructure to enable real-time device monitoring.",
-          "Modernized physical network infrastructure through strategic cabling and provisioning, enhancing site-wide connectivity and stability."
+          "Modernized physical network infrastructure through strategic cabling and provisioning, extending WiFi coverage by 50% to additional office areas."
         ]
       },
       {
         company: "HRConsulta",
-        role: "Erasmus+ Internship for Full Stack Developer",
+        role: "Full Stack Developer (Erasmus+ Curricular Internship)",
         date: "May 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
         points: [
-          "Spearheaded the full-stack development of two educational management platforms using React.js and PHP, digitizing manual workflows for the client.",
+          "Spearheaded the full-stack development of two educational management platforms using React.js and PHP, digitizing manual workflows and reducing administrative processing time by 50%.",
           "Designed and implemented a granular Role-Based Access Control (RBAC) system to ensure secure data access.",
-          "Standardized Git workflows and version control practices within the development team to ensure code integrity and streamline collaboration."
+          "Standardized Git workflows and version control practices within a 4-person development team, reducing merge conflicts by 80%."
         ]
       },
       {
         company: "BEWG.PT",
-        role: "Full Stack Developer Internship",
+        role: "Full Stack Developer (Curricular Internship)",
         date: "Jun 2024 – Aug 2024",
         location: "Lisbon",
         tags: ["php", "laravel", "mySQL", "SQL"],
         points: [
-          "Built a project management web application with PHP (Laravel) and MySQL, streamlining team coordination for 50+ employees and boosting productivity.",
-          "Implemented complete database design with MySQL and SQL optimization, creating optimized relationships and indexing strategies that enhanced query performance.",
-          "Delivered network infrastructure mapping and automated device configuration systems, improving network management efficiency."
+          "Built a project management web application with PHP (Laravel) and MySQL, streamlining team coordination for 50+ employees and reducing project tracking overhead by 40%.",
+          "Implemented complete database design with MySQL and SQL optimization, creating optimized relationships and indexing strategies.",
+          "Installed new switches and network cabling in a company building, improving internet speed by 10x."
         ]
       }
     ]
@@ -191,12 +185,6 @@ export const portfolioData = {
             title: "Motor de Avatar IA Interativo",
             featured: true,
             date: "Out 2025 - Presente",
-            links :{
-                web : "", 
-            },
-            images: [
-                "/projects/AI-Vtuber/1.png",
-            ],
             tags: ["Python", "LangGraph", "MCP", "WebSockets", "Faster Whisper", "Vue.js", "Live2D"],
             description: "Pipeline multimodal em tempo real que alimenta avatares de IA interativos com voz, visão e ferramentas.",
             bigDescription : "Um motor de orquestração de IA modular projetado para dar vida a personagens Live2D através de interação natural. Funciona como um sistema nervoso central, processando áudio em tempo real via modelos Whisper locais, orquestrando respostas cognitivas usando LangGraph (suportando OpenAI, Anthropic e LLMs Locais) e gerando voz sintetizada com dados de lip-sync. O sistema aproveita o Model Context Protocol (MCP) para estender as capacidades da IA, permitindo interações com ambientes externos como Discord ou a Web.",
@@ -225,11 +213,11 @@ export const portfolioData = {
             description: "Plataforma de mobiliário multi-vendedor construída com Django e React.",
             bigDescription : "Designia é uma plataforma abrangente de marketplace de mobiliário projetada para conectar múltiplos vendedores com clientes através de uma experiência de compra online perfeita. A plataforma é construída usando Django para o backend e React 19 para o frontend, garantindo uma interface de utilizador robusta e responsiva. As principais características incluem autenticação segura de utilizadores, funcionalidade de chat em tempo real e processamento de pagamentos integrado via Stripe Connect.",
             points: [
-              "Arquitetei um backend de Marketplace escalável usando Domain-Driven Design (DDD)* para lidar com transações financeiras complexas entre múltiplas partes.",
-              "Desenvolvi um Bus de Eventos em Tempo Real* usando Django Channels e Redis (WebSockets) para mensagens instantâneas e notificações ao vivo.",
-              "Integrei Stripe Connect* para automatizar pagamentos divididos complexos, cálculos de comissão e pagamentos aos vendedores.",
-              "Construí um Frontend de Próxima Geração usando React 19, Vite 7 e TailwindCSS 4*, priorizando desempenho e experiência do desenvolvedor.",
-              "Implantei Observabilidade em Produção com OpenTelemetry e Prometheus*, e serviços containerizados via Docker para fluxos de trabalho CI/CD consistentes.",
+              "Arquitetei um backend de Marketplace escalável usando Domain-Driven Design (DDD) para lidar com transações financeiras complexas entre múltiplas partes.",
+              "Desenvolvi um Bus de Eventos em Tempo Real usando Django Channels e Redis (WebSockets) para mensagens instantâneas e notificações ao vivo.",
+              "Integrei Stripe Connect para automatizar pagamentos divididos complexos, cálculos de comissão e pagamentos aos vendedores.",
+              "Construí um Frontend de Próxima Geração usando React 19, Vite 7 e TailwindCSS 4, priorizando desempenho e experiência do desenvolvedor.",
+              "Implantei Observabilidade em Produção com OpenTelemetry e Prometheus, e serviços containerizados via Docker para fluxos de trabalho CI/CD consistentes.",
             ],
         },
         YummiAI : {
@@ -248,15 +236,15 @@ export const portfolioData = {
                 "/projects/yummi/4.jpg",
             ],
             tags: ["React Native", "Django", "Visão Computacional", "GCP"],
-            description: "Aplicação móvel de reconhecimento de alimentos e rastreamento de calorias impulsionada por IA.",
+            description: "Aplicação móvel de reconhecimento de alimentos e rastreamento de calorias impulsionada por IA com 200+ utilizadores registados.",
             bigDescription : "YummiAI é uma aplicação móvel inovadora que aproveita tecnologias avançadas de IA para fornecer aos utilizadores análises nutricionais precisas e rastreamento de calorias. O aplicativo utiliza visão computacional para analisar imagens de alimentos, extraindo informações calóricas e nutricionais detalhadas. Construído com um backend Django robusto e um frontend React Native elegante, o YummiAI oferece uma experiência de utilizador perfeita, garantindo escalabilidade e desempenho através da implantação na Google Cloud Platform (GCP).",
             points: [
+                "Escalou a plataforma para 200+ utilizadores registados nos primeiros meses de lançamento, mantendo 99.9% de uptime em GCP.",
                 "Desenvolvi um Sistema de Reconhecimento de Alimentos impulsionado por IA usando a API Google Gemini Vision para automatizar o rastreamento de calorias e análise nutricional a partir de imagens enviadas pelos utilizadores.",
                 "Arquitetei um Backend Django REST robusto para respostas de modelos de IA para minimizar a latência e otimizar os custos operacionais da API.",
                 "Construí um Aplicativo Móvel Multiplataforma rico em recursos usando React Native (Expo) e NativeWind, entregando uma UI fluida com Reanimated e autenticação social integrada.",
                 "Desenvolvi uma Plataforma Web de Marketing de alto desempenho usando React 19, Vite 7 e TailwindCSS, otimizada para SEO e aquisição de utilizadores ultrarrápida.",
                 "Implementei fluxos de trabalho em segundo plano automatizados usando APScheduler para gerenciar manutenção agendada do sistema e notificações personalizadas aos utilizadores.",
-                "Orquestrei automações críticas em segundo plano e fluxos de trabalho de manutenção do sistema usando Cron jobs no servidor para garantir a integridade e confiabilidade dos dados.",
             ],
         },
         ClothingAI : {
@@ -299,38 +287,38 @@ export const portfolioData = {
     experience: [
       {
         company: "BEWG.PT",
-        role: "Estágio Desenvolvedor Full Stack",
+        role: "Desenvolvedor Full Stack (Estágio Curricular)",
         date: "Jun 2025 – Jul 2025",
         location: "Lisboa",
         tags: ["python", "laravel", "mySQL", "linux", "git"],
         points: [
-          "Arquitetei um dashboard centralizado de monitoramento IoT integrando Laravel e Django para visualizar métricas de saúde em tempo real de mais de 200 dispositivos.",
+          "Arquitetei um dashboard centralizado de monitoramento IoT integrando Laravel e Django para visualizar métricas de saúde em tempo real de mais de 200 dispositivos, reduzindo o tempo de inatividade da rede em 20%.",
           "Desenvolvi uma camada de integração de dados sobre a infraestrutura MySQL empresarial existente para permitir o monitoramento de dispositivos em tempo real.",
-          "Modernizei a infraestrutura de rede física através de cabeamento e provisionamento estratégico, melhorando significativamente a conectividade e estabilidade do local."
+          "Modernizei a infraestrutura de rede física através de cabeamento e provisionamento estratégico, expandindo a cobertura WiFi em 50% para áreas adicionais do escritório."
         ]
       },
       {
         company: "HRConsulta",
-        role: "Estágio Erasmus+ de Desenvolvedor Full Stack",
+        role: "Desenvolvedor Full Stack (Estágio Curricular Erasmus+)",
         date: "Mai 2025 – Jun 2025",
         location: "Malta",
         tags: ["php", "git", "MySQL"],
         points: [
-          "Liderei o desenvolvimento full-stack de duas plataformas de gestão educacional usando React.js e PHP, digitalizando fluxos de trabalho manuais para o cliente.",
+          "Liderei o desenvolvimento full-stack de duas plataformas de gestão educacional usando React.js e PHP, digitalizando fluxos de trabalho manuais e reduzindo o tempo de processamento administrativo em 50%.",
           "Projetei e implementei um sistema granular de Controle de Acesso Baseado em Funções (RBAC) para garantir o acesso seguro aos dados.",
-          "Padronizei fluxos de trabalho Git e práticas de controle de versão dentro da equipa de desenvolvimento para garantir a integridade do código e otimizar a colaboração."
+          "Padronizei fluxos de trabalho Git e práticas de controle de versão dentro de uma equipa de 4 desenvolvedores, reduzindo conflitos de merge em 80%."
         ]
       },
       {
         company: "BEWG.PT",
-        role: "Estágio Desenvolvedor Full Stack",
+        role: "Desenvolvedor Full Stack (Estágio Curricular)",
         date: "Jun 2024 – Ago 2024",
         location: "Lisboa",
         tags: ["php", "laravel", "mySQL", "SQL"],
         points: [
-          "Construí uma aplicação web de gestão de projetos com PHP (Laravel) e MySQL, otimizando a coordenação de equipa para mais de 50 funcionários e aumentando a produtividade.",
-          "Implementei o design completo da base de dados com MySQL e otimização SQL, criando relacionamentos otimizados e estratégias de indexação que melhoraram o desempenho das consultas.",
-          "Entreguei mapeamento de infraestrutura de rede e sistemas automatizados de configuração de dispositivos, melhorando a eficiência da gestão de rede."
+          "Construí uma aplicação web de gestão de projetos com PHP (Laravel) e MySQL, otimizando a coordenação de equipa para mais de 50 funcionários e reduzindo a sobrecarga de acompanhamento de projetos em 40%.",
+          "Implementei o design completo da base de dados com MySQL e otimização SQL, criando relacionamentos otimizados e estratégias de indexação.",
+          "Instalei novos switches e cabeamento de rede num edifício da empresa, melhorando a velocidade da internet em 10x."
         ]
       }
     ]

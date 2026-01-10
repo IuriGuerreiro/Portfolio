@@ -132,7 +132,7 @@ export default function ProjectClient() {
                             ))}
                         </div>
                     )}
-
+        
                     {/* Images Section */}
                     {projectData.images && projectData.images.length > 0 ? (
                         <div className="space-y-4">
@@ -188,13 +188,7 @@ export default function ProjectClient() {
                                 ))}
                             </div>
                         </div>
-                    ) : (
-                        // Fallback if no images or videos
-                        !projectData.videos && (
-                            <div className="aspect-video bg-neutral-900/50 border border-neutral-800 rounded-lg flex items-center justify-center text-neutral-600 font-mono text-xs">
-                                No Preview Available
-                            </div>
-                        )
+                    ) : (null
                     )}
                     
                     <div>

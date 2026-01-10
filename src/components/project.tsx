@@ -73,59 +73,72 @@ export const Project: React.FC<ProjectsProps> = ({ project, slug }) => {
             </div>
 
             {/* Links Section */}
-            {project.links && (
-                <div className="flex flex-wrap gap-4 mt-4 relative z-10" onClick={(e) => e.stopPropagation()}>
-                    {project.links.web && (
-                        <a 
-                            href={project.links.web} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <Globe size={16} />
-                            <span>Website</span>
-                        </a>
-                    )}
-                    {project.links.ios && (
-                        <a 
-                            href={project.links.ios} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <Smartphone size={16} />
-                            <span>iOS</span>
-                        </a>
-                    )}
-                    {project.links.android && (
-                        <a 
-                            href={project.links.android} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <Smartphone size={16} />
-                            <span>Android</span>
-                        </a>
-                    )}
-                    {project.links.other?.map((link, i) => (
-                        <a 
-                            key={i}
-                            href={link.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <LinkIcon size={16} />
-                            <span>{link.name}</span>
-                        </a>
-                    ))}
-                </div>
-            )}
+            <div className="flex flex-wrap items-center gap-4 mt-4 relative z-10" onClick={(e) => e.stopPropagation()}>
+                {project.links && (
+                    <>
+                        {project.links.web && (
+                            <a
+                                href={project.links.web}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <Globe size={16} />
+                                <span>Website</span>
+                            </a>
+                        )}
+                        {project.links.ios && (
+                            <a
+                                href={project.links.ios}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <Smartphone size={16} />
+                                <span>iOS</span>
+                            </a>
+                        )}
+                        {project.links.android && (
+                            <a
+                                href={project.links.android}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <Smartphone size={16} />
+                                <span>Android</span>
+                            </a>
+                        )}
+                        {project.links.other?.map((link, i) => (
+                            <a
+                                key={i}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors z-10 relative"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <LinkIcon size={16} />
+                                <span>{link.name}</span>
+                            </a>
+                        ))}
+                    </>
+                )}
+
+                {/* Read More Button */}
+                {slug && (
+                    <Link
+                        href={`/projects/${slug}`}
+                        className="ml-auto px-4 py-2 text-sm font-mono bg-neutral-900 border border-neutral-800 text-neutral-400 hover:border-white hover:text-white transition-all duration-300 z-10 relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {lang === 'pt' ? 'Ler Mais →' : 'Read More →'}
+                    </Link>
+                )}
+            </div>
         </div>
     );
 }

@@ -13,7 +13,7 @@ import { Github, Mail, Linkedin, Globe, Server, Code, Terminal, Cpu, ArrowRight}
 
 
 export default function Home() {
-  const { lang, setLang } = useLanguage();
+  const { lang } = useLanguage();
   const content = portfolioData[lang];
   const router = useRouter();
 
@@ -25,7 +25,7 @@ export default function Home() {
     <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
         
       {/* HERO SECTION */}
-      <section className="mb-32 fade-in">
+      <section className="mb-32 animate-fade-in-up">
         <div className="inline-block mb-4 px-3 py-1 rounded-full border border-neutral-800 bg-neutral-900/30 text-xs font-mono text-neutral-400">
           {content.hero.status}
         </div>
@@ -54,8 +54,8 @@ export default function Home() {
             <Globe size={16} />
             {content.hero.location}
           </span>
-          <a href="mailto:iurifernandesguerreiro@gmail.com" className="hover:text-white transition-colors flex items-center gap-2">
-              <Mail size={16} /> iurifernandesguerreiro@gmail.com
+          <a href="mailto:contact@iuriguerreiro.dev" className="hover:text-white transition-colors flex items-center gap-2">
+              <Mail size={16} /> contact@iuriguerreiro.dev
             </a>
           <a href="https://github.com/IuriGuerreiro" className="hover:text-white transition-colors flex items-center gap-2">
             <Github size={16} /> github.com/IuriGuerreiro
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="mb-32">
+      <section id="projects" className="mb-32 animate-fade-in-up [animation-delay:100ms] opacity-0">
         <div className="flex items-center gap-4 mb-16">
           <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
             01. {content.sectionTitles.projects}
@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE SECTION */}
-      <section id="experience" className="mb-32">
+      <section id="experience" className="mb-32 animate-fade-in-up [animation-delay:200ms] opacity-0">
            <div className="flex items-center gap-4 mb-16">
              <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
               02. {content.sectionTitles.experience}
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* TECHNICAL STACK */}
-      <section className="mb-32">
+      <section className="mb-32 animate-fade-in-up [animation-delay:300ms] opacity-0">
         <div className="flex items-center gap-4 mb-12">
             <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
             03. {content.sectionTitles.stack}
@@ -154,6 +154,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-2 font-mono text-sm text-neutral-400">
                   <span>LangChain / LangGraph</span>
+                  <span>RAG (Retrieval-Augmented)</span>
                   <span>Faster Whisper</span>
                   <span>Computer Vision</span>
                   <span>Local LLMs (Ollama)</span>
@@ -176,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="mb-32">
+      <section id="contact" className="mb-32 animate-fade-in-up [animation-delay:400ms] opacity-0">
         <div className="flex items-center gap-4 mb-16">
           <h3 className="text-sm font-mono text-neutral-500 uppercase tracking-widest whitespace-nowrap">
             04. {content.nav.contact}
@@ -196,7 +197,7 @@ export default function Home() {
           
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:iurifernandesguerreiro@gmail.com" 
+              href="mailto:contact@iuriguerreiro.dev" 
               className="flex items-center gap-2 px-8 py-4 bg-white text-black font-mono text-sm font-bold rounded hover:bg-neutral-200 transition-all"
             >
               <Mail size={18} /> {lang === 'en' ? 'Say Hello' : 'Dizer Olá'}
